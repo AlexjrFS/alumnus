@@ -1,8 +1,13 @@
 import { v4 } from "uuid";
 import Professor from "../models/entities/professor";
 import ProfessorRep from "../models/repositories/professorRep";
-
 class ProfessorService {
+    static updateProfessorById(id: string, professor: any) {
+        throw new Error("Method not implemented.");
+    }
+    static saveProfessor(professor: any) {
+        throw new Error("Method not implemented.");
+    }
     private static instance: ProfessorService;
 
     private constructor(){
@@ -31,6 +36,17 @@ class ProfessorService {
 
     public async deleteProfessorByID(id: string) : Promise <void>{
         await ProfessorRep.delete({id});
+    }
+    //check protocol to change email and password / conferir protocolo de mudança de email e senha
+    public async updateProfessorById(id: string,professor : Professor) : Promise <void>{
+        const ProfessorNow = await ProfessorRep.findOneBy({id});
+        if(ProfessorNow){
+            ProfessorNow.email = professor.email;
+            ProfessorNow.senha = professor.senha;
+            await ProfessorRep.save(ProfessorNow)
+        }
+        
+        Promise.resolve();
     }
 }
 

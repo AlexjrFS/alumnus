@@ -2,6 +2,12 @@ import { v4 } from "uuid";
 import Professor from "../models/entities/professor";
 import ProfessorRep from "../models/repositories/professorRep";
 class ProfessorService {
+    criaProfessor(Professor: typeof Professor) {
+        throw new Error('Method not implemented.');
+    }
+    lerTodos() {
+        throw new Error('Method not implemented.');
+    }
     static updateProfessorById(id: string, professor: any) {
         throw new Error("Method not implemented.");
     }

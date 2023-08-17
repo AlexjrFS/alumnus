@@ -17,14 +17,13 @@ test('criar produto', async () => {
     //ProfessorRep.save()
 
     const id1 = v4();
-    const produto = {
-        id: id1, nome: "perfume", serie: 1234, descricao: "asdaff", preco: 12
-    }; // as Produto;
-    expect(professores.length).toBe(0);
-    ProfessorService.getInstance().criarProfessor(professor);
+    const professor = {
+        id: id1, email: "perfume", senha: "1234"
+    expect(professores.length).toBe(0),
+    ProfessorService.getInstance().criaProfessor(Professor);
     //professoreservice.getInstance().lerTodos()
     expect(professores.length).toBe(1);
-    expect(professores[0].email).toBe(produto.nome);
+    expect(professores[0].email).toBe(professores[1].email);
 })
 
 
@@ -34,15 +33,15 @@ test('ler todos', async ()=>{
     const id1 = v4();
     const id2= v4();
    
-    const produto1 = {
-        id: id1, nome: "perfume", serie: 1234, descricao: "asdaff", preco: 12
+    const professor1 = {
+        id: id1, email: "perfume", senha: "1234"
     } 
-    const produto2 = {
-        id: id2, nome: "perfume", serie: 1235, descricao: "asdaff", preco: 12
+    const professor2 = {
+        id: id2, email: "perfume", senha: "1235"
     } 
-    await ProfessorRep.save(produto1)
-    await ProfessorRep.save(produto2)
-    const professoresResultado = await professoreservice.getInstance().lerTodos();
+    await ProfessorRep.save(professor1)
+    await ProfessorRep.save(professor2)
+    const professoresResultado = await ProfessorService.getInstance().lerTodos();
     expect (professoresResultado.length).toBe(2);
    // expect(professores[1]).toBe(produto2);
 })

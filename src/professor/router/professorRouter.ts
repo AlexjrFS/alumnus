@@ -1,6 +1,6 @@
 import {Router} from "express"
 import ProfessorController from "../controller/professorController";
-a
+
 const professorRouter= Router();
 
 professorRouter.post('/',ProfessorController.getInstance().saveProfessor);

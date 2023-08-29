@@ -1,0 +1,34 @@
+{
+    "alunos": [
+      {
+        "id": 1,
+        "name": "Enzo",
+        "curso": "TI"
+      },
+      {
+        "id": 2,
+        "name": "Luana",
+        "curso": "TI"
+      },
+      {
+        "name": "Catarina",
+        "curso": "Enfermagem",
+        "id": 3
+      },
+      {
+        "name": "Joana",
+        "curso": "Quimica",
+        "id": 4
+      },
+      {
+        "name": "Marcos",
+        "curso": "Analises Clinicas",
+        "id": 4
+      },
+      {
+        "name": "Luiza",
+        "curso": "Desing de Int.",
+        "id": 6
+      }
+    ]
+  }
